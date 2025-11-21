@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemilihan Ketua OSIS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <div id="login-card" class="card">
+    <h2>Login Voting<br>Pemilihan Ketua OSIS<br>SMK Negeri 1 Baureno<br>Tahun Pelajaran<br>2025-2026</h2>
+    <input type="email" id="email-input" placeholder="Masukkan Email">
+    <button onclick="sendOTP()">Kirim OTP</button>
+
+    <div id="otp-section" style="display:none;">
+      <input type="text" id="otp-input" placeholder="Masukkan OTP">
+      <button onclick="verifyOTP()">Verifikasi OTP</button>
+    </div>
+  </div>
+
+  <!-- VOTING -->
+  <div id="voting-section" style="display:none;">
+    <h2>Pilih Kandidat OSIS</h2>
+    <div id="candidates" style="font-size:14px;"></div>
+
+    <p id="message"></p>
+
+    <button id="show-results-btn" onclick="showResults()">Lihat Hasil Voting</button>
+
+    <!-- Modal Hasil -->
+    <div id="results-modal">
+      <div class="modal-content">
+        <h3>Hasil Voting Sementara</h3>
+        <div id="results-list"></div>
+        <button onclick="closeResults()">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
